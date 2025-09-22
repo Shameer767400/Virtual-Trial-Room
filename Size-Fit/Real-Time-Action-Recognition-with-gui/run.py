@@ -13,13 +13,10 @@ import settings
 
 poseEstimator = None
 
-
 def load_model():
     global poseEstimator
     poseEstimator = TfPoseEstimator(
         get_graph_path('mobilenet_thin'), target_size=(432, 368))
-
-
 class Ui_MainWindow(QtWidgets.QWidget):
 
     def __init__(self, parent=None):
